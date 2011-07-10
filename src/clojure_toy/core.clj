@@ -1,5 +1,3 @@
-; (add-classpath "file:///Users/julien/Code/clojure_toy/lib/redis-clojure.jar")
-
 (ns clojure_toy.core
   (:use compojure.core, hiccup.core)
   (:require [compojure.route :as route]
@@ -8,8 +6,8 @@
 
 
 (defn hello [params]
- (html [:h1 (str "Hello " (params :name)) ]
-       [:p (str "Params: " (zipmap (keys params) (vals params)))]))
+  (html [:h1 (str "Hello " (params :name)) ]
+        [:p (str "Params: " (zipmap (keys params) (vals params)))]))
 
 (defroutes main-routes
   (GET "/" [] "<h1>Hello from Compojure!</h1>")
